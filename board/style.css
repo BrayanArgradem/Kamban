@@ -1,0 +1,323 @@
+:root {
+  --primary-color: #E6ECF0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FFF;
+
+}
+
+
+.head {
+  height: 70px;
+  background-color: #9450b4;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.head a {
+  font-family: sans-serif, 'roboto';
+  font-size: 16px;
+  width: 70px;
+  height: 20px;
+  margin: 0 150px;
+  text-decoration: none;
+  background-color: #9450b4;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.head a span {
+  margin-right: 5px;
+}
+
+.button_head {
+  background-color: #9450b4;
+  border: none;
+  margin-right: 10px;
+}
+
+.top-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:20px;
+}
+
+.search-bar {
+  position: relative;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  box-shadow: 1px 1px 3px black;
+}
+
+
+.search-bar input {
+  background-color: var(--primary-color);
+  position: absolute;
+  left: 10px;
+  width: 318px;
+  height: 40px;
+  padding-left: 15px;
+  border: none;
+  position: relative; 
+  border-radius: 5px;
+}
+
+.search-bar input::placeholder {
+  color: #9450b4;
+}
+
+#searchIcon {
+  position: absolute; 
+  left: 10px;
+  top: 50%; 
+  transform: translateY(-50%);
+  color: #9450b4;
+  padding-left: 10px;
+}
+
+
+.new_add_btn {
+  position: absolute;
+  right: 10px;
+  width: 120px;
+  height: 40px;
+  border: 1px solid #9450b4;
+  border-radius: 5px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9450b4;
+  color: #EEE;
+  box-shadow: 1px 1px 3px #9450b4;
+}
+
+
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFF;
+  padding: 30px;
+}
+
+button.primary {
+  border: none;
+  background-color: var(--primary-color);
+  color: #FFF;
+  font-size: 16px;
+  padding: 9px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.container {
+  flex-grow: 1;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 10px 0px 10px;
+  
+}
+
+  .container .column {
+    width: 100%;
+    height: 600px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 3px black;
+  }
+
+    .container .column .head {
+      background-color: #9450b4;
+      color: #FFF;
+      font-weight: bold;
+      padding: 15px;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .container .column .body {
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+      .container .column .body .cards_list {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .container .column .body .add_btn {
+        background: none;
+        border: 1px solid;
+        border-radius: 10px;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        cursor: pointer;
+        color: #444;
+      }
+
+      .container .column .body .card {
+        background-color: #FFF;
+        border-radius: 7px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .container .column .body .card .info {
+        font-size: 14px;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .container .column .body .card .info span .title {
+        background-color: #9450b4;
+        color: #EEE;
+        padding: 3px;
+        border-radius: 5px;
+      }
+
+      .container .column .body .card .info span .title:empty {
+        background-color: transparent;
+        display: none; 
+      }
+
+      
+      .container .column .body .card .info span .material_icon {
+        width: 20px;
+        height: 20px;
+        color: red
+      }
+
+      .container .column .body .card .info span .priority {
+        background-color: #9450b4;
+        color: #EEE;
+        padding: 3px;
+        border-radius: 5px;
+      }
+      
+      .container .column .body .card .info span .priority:empty {
+        background-color: transparent;
+        display: none; 
+      }
+
+      .container .column .body .card .info span .date {
+        font-weight: bold;
+        background-color: #9450b4;
+        color: #EEE;
+        padding: 3px;
+        border-radius: 5px;
+      }
+
+      
+#modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+  #modal .box {
+    background-color: #FFF;
+    width: 400px;
+    border-radius: 7px;
+    overflow: hidden;
+  }
+
+    #modal .box .head {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 20px;
+      border-bottom: 1px solid #DDD;
+    }
+
+      #modal .box .head span {
+        font-size: 18px;
+        font-weight: 700;
+        color: #FFF;
+      }
+
+      #modal .box .head button {
+        border: none;
+        background: none;
+        font-size: 24px;
+        font-weight: 700;
+        cursor: pointer;
+        color: #FFF;
+      }
+
+    #modal .box .form {
+      padding: 20px;
+    }
+
+      #modal .box .form .form-group {
+        margin-bottom: 15px;
+      }
+
+      #modal .box .form label {
+        display: block;
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 5px;
+      }
+
+      #modal .box .form textarea,
+      #modal .box .form select,
+      #modal .box .form input {
+        width: 100%;
+        border-radius: 7px;
+        font-size: 14px;
+        border: 1px solid #999;
+        color: #333;
+      }
+
+      #modal .box .form textarea {
+        padding: 10px 15px;
+      }
+
+      #modal .box .form select {
+        padding: 10px;
+      }
+      
+      #modal .box .form input {
+        padding: 10px;
+      }
+
+      #modal .box .form button {
+        display: block;
+        margin-left: auto;
+        background-color:#9450b4 ;
+      }
